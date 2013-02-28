@@ -1,0 +1,15 @@
+# ~/.bash_aliases
+
+alias ls='ls --color=auto'
+alias pa='ps -A'
+alias g='git'
+alias ga='git add -A'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gm='git commit -m'
+alias gam='git commit -am'
+alias gb='git branch'
+alias gcl='git clone'
+alias gu='git reset HEAD'
+alias gdr='git checkout --'

@@ -1,0 +1,22 @@
+﻿[user]
+	name = Edson Drago
+	email = contact@edrago.me
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+	auto = always
+	ui = auto
+[core]
+	editor = vim
+[fetch]
+	recurseSubmodules = true
+[push]
+	default = current
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[diff]
+	tool = gvimdiff
+[difftool]
+	prompt = false
