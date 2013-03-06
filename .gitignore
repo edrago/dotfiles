@@ -1,2 +1,4 @@
-vimfiles/bundle/
-.netrwhist
+# Ignore some vim files
+.vim/bundle
+!.vim/bundle/vundle
+.vim/.netrwhist
