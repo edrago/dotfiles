@@ -1,3 +1,5 @@
+" vim: set filetype=vim:
+
 " Improve color on terminal
 Bundle 'godlygeek/csapprox'
 

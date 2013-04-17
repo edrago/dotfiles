@@ -6,23 +6,24 @@ call vundle#rc()
 " Let Vundle handle itself
 Bundle 'gmarick/vundle'
 
-" Colors
-source ~/.vim/.vundle.colors.vim
+" Colorschemes
+source ~/.vim/colors.vundle
 
 " Auxiliary vim plugins
-"Bundle 'sjl/splice.vim' "Don't play well with fugitive
 Bundle 'tpope/vim-surround'
+" Bundle 'sjl/splice.vim' "Don't play well with fugitive
 
 " Git
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
-" HTML/CSS
+" Markup
 Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tpope/vim-markdown'
 
 " Javascript
+Bundle 'pangloss/vim-javascript'
 Bundle 'jakar/vim-json'
 
-" Misc.
-Bundle 'tpope/vim-markdown'
+" vim:set filetype=vim:

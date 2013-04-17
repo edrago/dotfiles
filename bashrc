@@ -20,6 +20,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Set up a editor for programs that want them.
+export SUDO_EDITOR='vim'
 export EDITOR='vim'
 export VISUAL='gvim'
 
