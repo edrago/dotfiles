@@ -21,6 +21,9 @@ ln -s $DIR/vim $HOME/.vim
 echo "Synlinking vimrc [./vimrc > $HOME/.vimrc]"
 ln -s $DIR/vimrc $HOME/.vimrc
 
+echo "Synlinking gvimrc [./gvimrc > $HOME/.gvimrc]"
+ln -s $DIR/gvimrc $HOME/.gvimrc
+
 # Fetch the Vundle repo and subsequently install all bundles.
 echo "Fetching Vundle repository..."
 git clone https://github.com/gmarik/vundle $DIR/vim/bundle/vundle

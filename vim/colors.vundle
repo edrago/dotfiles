@@ -1,9 +1,8 @@
-" vim: set filetype=vim:
-
-" Improve color on terminal
+" Improve color on terminal (Requires Graphical Vim)
 Bundle 'godlygeek/csapprox'
 
 " Colorschemes
+Bundle 'zaiste/Atom'
 Bundle 'sjl/badwolf'
 Bundle 'baycomb'
 Bundle 'baskerville/bubblegum'
@@ -18,3 +17,5 @@ Bundle 'Satori-Color-Scheme'
 Bundle 'bullfight/sexy-railscasts-theme'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jnurmine/Zenburn'
+
+" vim: filetype=vim

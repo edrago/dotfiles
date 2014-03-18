@@ -9,9 +9,13 @@ Bundle 'gmarick/vundle'
 " Colorschemes
 source ~/.vim/colors.vundle
 
-" Auxiliary vim plugins
+
+" Auxiliary vim plugins "
+" ===================== "
+
+" Misc
 Bundle 'tpope/vim-surround'
-" Bundle 'sjl/splice.vim' "Don't play well with fugitive
+"Bundle 'sjl/splice.vim' "Don't play well with fugitive
 
 " Git
 Bundle 'tpope/vim-git'
@@ -22,8 +26,18 @@ Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'tpope/vim-markdown'
 
+
+" Programming Languages Plugins "
+" ============================= "
+
 " Javascript
 Bundle 'pangloss/vim-javascript'
 Bundle 'jakar/vim-json'
 
-" vim:set filetype=vim:
+" PHP
+Bundle 'joshtronic/php.vim'
+
+" Rust
+Bundle 'wting/rust.vim'
+
+" vim: filetype=vim
