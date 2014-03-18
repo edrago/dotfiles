@@ -4,7 +4,7 @@ set guioptions-=T
 
 " Set gvim font, according to being on Linux or Windows
 if has("gui_gtk2") || has("gui_gtk3")
-  set guifont=DejaVu\ Sans\ Mono\ 9,\ Bitstream\ Vera\ Sans\ Mono\ 9
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 9,\ DejaVu\ Sans\ Mono\ 9
 else
   set guifont=Consolas:h9,\ DejaVu\ Sans\ Mono:h9
 endif

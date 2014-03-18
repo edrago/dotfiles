@@ -16,7 +16,7 @@ filetype plugin indent on
 " Mappings {{{
 " ============
 let mapleader=","
-let maplocalleader="-"
+let maplocalleader="\\"
 
 " Use HJKL!!
 noremap <Up>    <NOP>
@@ -24,26 +24,43 @@ noremap <Down>  <NOP>
 noremap <Left>  <NOP>
 noremap <Right> <NOP>
 inoremap <Up>   <NOP>
-inoremap <Down>     <NOP>
-inoremap <Left>     <NOP>
-inoremap <Right>    <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 source ~/.vim/mappings.vim
 " }}}
 
 " General settings {{{
 " ====================
-set encoding=utf-8 fileencoding=utf-8
+set encoding=utf-8
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 set wildmenu
-" Vim behavior
+set modelines=2
+set backspace=indent,eol,start
+set history=1000
 set autoread
-set nobackup
+set undofile
+set backup
 set noswapfile
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+
+" Make those folders, if they already don't exist.
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+  call mkdir(expand(&backupdir), "p")
+endif
+
 set clipboard="unnamed"
+set splitbelow
+set splitright
+
 " Formating
 set autoindent
 set expandtab "Use spaces instead of tabs
@@ -59,10 +76,15 @@ source ~/.vim/ftsettings.vim
 " =============
 syntax on
 set title
+set showcmd
+set lazyredraw
+set number
 set relativenumber
-"Show tabs as '▸\\\'
+"Show tabs typically hidden symbols
 set list
-set listchars=tab:▸\
+set listchars=tab:▸·,eol:↓
+set showbreak=↪
+set colorcolumn=+1
 
 "Statusline options
 set laststatus=2
@@ -70,12 +92,12 @@ set statusline=%.25F "File path, limited to 25 chars
 set statusline+=%m\ %h "Modified '+' and help flags
 set statusline+=\ [%{&fenc}/%{&ff}/%Y] "['FileEncode'/'FileFormat'/'FileType']
 set statusline+=\ %= "Change aligning to right
-set statusline+=%c,%l/%L\ \ %P "Cursor column and line position, and total lines
+set statusline+=%c,%l/%L\ \ %P "Cursor column ,line position, and total lines
 
 let time = strftime("%H")
 
-" Set gvim font, according to being on Linux or Windows
-if &term =~ "^\(xterm\|screen\)$" || $COLORTERM == "gnome-terminal"
+" Set vim colorscheme based on terminal color support
+if &term =~ "^\\(xterm\\|screen\\)$" || $COLORTERM == "gnome-terminal"
   set t_Co=256
   let g:solarized_termcolors=256
   let g:CSApprox_eterm = 0
@@ -85,10 +107,10 @@ if &term =~ "^\(xterm\|screen\)$" || $COLORTERM == "gnome-terminal"
   " Set coloscheme according to current time [Night/Day]
   if time < 05 || time > 18
     set background=dark
-    colorscheme hemisu
+    colorscheme liquidcarbon
   else
     set background=light
-    colorscheme solarized
+    colorscheme hemisu
   endif
 endif
 let g:CSApprox_loaded = 0
