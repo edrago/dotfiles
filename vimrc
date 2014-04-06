@@ -97,11 +97,9 @@ set statusline+=%c,%l/%L\ \ %P "Cursor column ,line position, and total lines
 let time = strftime("%H")
 
 " Set vim colorscheme based on terminal color support
-if &term =~ "^\\(xterm\\|screen\\)$" || $COLORTERM == "gnome-terminal"
-  set t_Co=256
+if &t_Co == 256
+  set t_ut=
   let g:solarized_termcolors=256
-  let g:CSApprox_eterm = 0
-  let g:CSApprox_konsole = 0
   let g:CSApprox_use_showrgb = 1
 
   " Set coloscheme according to current time [Night/Day]
@@ -110,8 +108,10 @@ if &term =~ "^\\(xterm\\|screen\\)$" || $COLORTERM == "gnome-terminal"
     colorscheme liquidcarbon
   else
     set background=light
-    colorscheme hemisu
+    colorscheme pencil
   endif
+else
+  let g:CSApprox_loaded = 0
+  colorscheme desert
 endif
-let g:CSApprox_loaded = 0
 "}}}

@@ -2,6 +2,20 @@
 # See /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples.
 
+# Verify 256color support and set TERM accordingly
+if [ -e /usr/share/terminfo/x/xterm+256color ] &&
+  [ "$COLORTERM" == "xfce4-terminal" ] ||
+  [ "$COLORTERM" == "gnome-terminal" ]; then
+  case "$TERM" in
+    xterm*)
+      export TERM=xterm-256color
+      ;;
+    screen*)
+      export TERM=screen-256color
+      ;;
+  esac
+fi
+
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
@@ -16,8 +30,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # Set up a editor for programs that want them.
 export SUDO_EDITOR='vim'
