@@ -1,10 +1,10 @@
 " Initialize Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle handle itself
-Plugin 'gmarick/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Colorschemes
 source ~/.vim/colors.vundle
@@ -43,4 +43,5 @@ Plugin 'joshtronic/php.vim'
 " Rust
 Plugin 'wting/rust.vim'
 
+call vundle#end()
 " vim: filetype=vim

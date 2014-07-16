@@ -33,22 +33,15 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# Set up a editor for programs that want them.
+# Set up some env variables that the system might use.
 export SUDO_EDITOR='vim'
 export EDITOR='vim'
 export VISUAL='gvim'
+export BROWSER='firefox'
 
 # Check the window size after each command and, if necessary, update the values
 # of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# Make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 ## Uncomment for a colored prompt, if the terminal has the capability; turned
 ## off by default to not distract the user: the focus in a terminal window
@@ -66,17 +59,22 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
+# Source git prompt if on Arch
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+  . /usr/share/git/completion/git-prompt.sh
+fi
+
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")$ '
+  PS1='\u@\h:\w$(__git_ps1 " (%s)")$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
   xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
     ;;
   *)
     ;;

@@ -4,6 +4,7 @@ Plugin 'godlygeek/csapprox'
 " Colorschemes
 Plugin 'zaiste/Atom'
 Plugin 'sjl/badwolf'
+Plugin 'chriskempson/base16-vim'
 Plugin 'baycomb'
 Plugin 'baskerville/bubblegum'
 Plugin 'eclm_wombat.vim'

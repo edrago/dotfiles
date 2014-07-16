@@ -4,7 +4,7 @@
 # necessary.
 
 DIR=$( cd "$( dirname "$0" )" && pwd )
-SYMLINKS="bashrc bash_aliases bash_profile gitconfig vim vimrc gvimrc tmux.conf"
+SYMLINKS="bashrc bash_aliases bash_profile gitconfig  pentadactylrc vim vimrc gvimrc tmux.conf"
 
 ## Create backup of files if exist and symlink the .file
 for s in $SYMLINKS
