@@ -13,6 +13,9 @@ source ~/.vim/colors.vundle
 " Auxiliary vim plugins "
 " ===================== "
 
+" Path
+Plugin 'tpope/vim-classpath'
+
 " Misc
 Plugin 'tpope/vim-surround'
 "Plugin 'sjl/splice.vim' "Don't play well with fugitive
@@ -24,6 +27,8 @@ Plugin 'tpope/vim-fugitive'
 " Markup Languages
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-haml' "Haml, Sass and SCSS syntax support
 Plugin 'tpope/vim-markdown'
 
 " Tmux config file syntax
@@ -32,6 +37,9 @@ Plugin 'zaiste/tmux.vim'
 
 " Programming Languages Plugins "
 " ============================= "
+
+" Clojure
+Plugin 'tpope/vim-fireplace'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
