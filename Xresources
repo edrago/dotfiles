@@ -1,0 +1,54 @@
+! Zenburn ColorScheme
+*background:  #3f3f3f
+*foreground:  #dcdccc
+
+*color0:      #1E2320
+*color1:      #705050
+*color2:      #60b48a
+*color3:      #dfaf8f
+*color4:      #506070
+*color5:      #dc8cc3
+*color6:      #8cd0d3
+*color7:      #dcdccc
+*color8:      #709080
+*color9:      #dca3a3
+*color10:     #c3bf9f
+*color11:     #f0dfaf
+*color12:     #94bff3
+*color13:     #ec93d3
+*color14:     #93e0e3
+*color15:     #ffffff
+
+Xft.dpi: 96
+Xft.rgba: rgb Xft.autohint: false
+
+
+!! urxvt Settings !!
+!------------------!
+
+! General
+urxvt*scrollBar:       false
+urxvt*secondaryScroll: true
+urxvt*saveLines:       65535
+urxvt*cursorBlink:     false
+urxvt*urgentOnBell:    true
+
+! Extensions
+urxvt*perl-ext-common: default,matcher,searchable-scrollback
+urxvt*urlLauncher:     /usr/bin/xdg-open
+urxvt*matcher.button:  1
+!  - catch ugly URLs
+urxvt.cutchars:        "()'*<>[]{|}"
+
+! Appearance
+!- use a bitmap font
+urxvt*font:        xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=true,\
+                   xft:DejaVu Sans Mono:pixelsize=11:antialias=true,\
+                   -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+urxvt*boldFont:    xft:Bitstream Vera Sans Mono:bold:pixelsize=11:antialias=true,\
+                   xft:DejaVu Sans Mono:bold:pixelsize=11:antialias=true,\
+                   -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
+urxvt*letterSpace: 0
+!- pseudo transparency
+urxvt*transparent: true
+urxvt*shading:     40

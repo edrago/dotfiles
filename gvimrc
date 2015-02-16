@@ -15,5 +15,5 @@ if time < 05 || time > 18
   colorscheme liquidcarbon
 else
   set background=light
-  colorscheme hemisu
+  colorscheme flatui
 endif

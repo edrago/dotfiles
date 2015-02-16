@@ -79,7 +79,6 @@ set title
 set showcmd
 set lazyredraw
 set number
-set relativenumber
 "Show tabs typically hidden symbols
 set list
 set listchars=tab:▸·,eol:↓
@@ -98,8 +97,6 @@ let time = strftime("%H")
 
 " Set vim colorscheme based on terminal color support
 if &t_Co == 256
-  set t_ut=
-  let g:solarized_termcolors=256
   let g:CSApprox_use_showrgb = 1
 
   " Set coloscheme according to current time [Night/Day]
@@ -108,7 +105,7 @@ if &t_Co == 256
     colorscheme liquidcarbon
   else
     set background=light
-    colorscheme pencil
+    colorscheme flatui
   endif
 else
   let g:CSApprox_loaded = 0

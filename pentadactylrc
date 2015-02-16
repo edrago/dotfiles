@@ -9,6 +9,7 @@ map -count -modes=n -silent l -builtin <count>3l
 map -count -modes=n -silent h -builtin <count>3h
 set complete=location,suggestion
 set defsearch=duckduckgo
+set guioptions=bnCrs
 set hlfind
 set suggestengines=duckduckgo
 

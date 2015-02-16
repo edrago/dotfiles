@@ -5,8 +5,6 @@
 " Normal mode mappings {{{
 " ========================
 nnoremap ; :
-nnoremap H 0
-nnoremap L $
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>p :cprevious<cr>
 

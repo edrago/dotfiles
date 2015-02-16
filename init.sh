@@ -4,7 +4,7 @@
 # necessary.
 
 DIR=$( cd "$( dirname "$0" )" && pwd )
-SYMLINKS="bashrc bash_aliases bash_profile gitconfig  pentadactylrc vim vimrc gvimrc tmux.conf"
+SYMLINKS="bashrc bash_aliases bash_profile gitconfig  pentadactylrc vim vimrc gvimrc tmux.conf Xmodmap Xresources"
 
 ## Create backup of files if exist and symlink the .file
 for s in $SYMLINKS
@@ -19,7 +19,7 @@ done
 
 # Fetch the Vundle repo and subsequently install all bundles.
 echo "Fetching Vundle repository..."
-git clone https://github.com/gmarik/vundle $DIR/vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim $DIR/vim/bundle/Vundle.vim
 echo
-echo "Installing Vim plugins in background, please wait..." 
+echo "Installing Vim plugins, please wait..." 
 vim -Nu $DIR/vim/main.vundle +PluginInstall +qa
